@@ -22,3 +22,14 @@ logout.addEventListener('click',e=>{
         console.log('User signed out');
     })
 })
+
+//listen for change in auth status
+auth.onAuthStateChanged(user=>{
+    //if logged,in user is an object.If logged out,user is null
+    console.log(user);
+    if(user){
+        console.log('User logged in');
+    }else{
+        console.log('User is logged out');
+    }
+})
